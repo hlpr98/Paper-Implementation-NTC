@@ -22,4 +22,9 @@ def generate_p_g_q(length_of_message=0):
     
     return p,g,q
 
+# generating the random private secrete 'a'
+def generate_a():
+
+    return random.randint(constants.RAND_NUMBER_LOWER_BOUND, constants.RAND_NUMBER_UPPER_BOUND)
+
 
