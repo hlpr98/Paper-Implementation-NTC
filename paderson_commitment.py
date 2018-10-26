@@ -32,4 +32,9 @@ def generate_h(g,a,p):
 
     return pow(g,a,p)   # g^a mod p
 
+# generating r∈Zq which is used during 'commitment'  
+def generate_r(q):
+
+    return random.randint(0,q-1)
+
 
