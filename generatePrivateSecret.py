@@ -1,4 +1,5 @@
 import constants
+import paderson_commitment
 
 # this is not cryptographically secure, use secrets library if time permits
 import random
@@ -10,9 +11,11 @@ def generatePrivateSecret():
     p = constants.SHARED_PRIME
 
     # choose a random number Xi
-    Xi = random.randint(constants.RAND_NUMBER_LOWER_BOUND, constants.RAND_NUMBER_UPPER_BOUND)
+    # Xi = random.randint(constants.RAND_NUMBER_LOWER_BOUND, constants.RAND_NUMBER_UPPER_BOUND)
+    Xi = paderson_commitment.generate_a()
 
-    privateSecret = (g ** Xi) % p
+    # privateSecret = (g ** Xi) % p
+    privateSecret = paderson_commitment.generate_h(g,p,Xi)
 
     # DEBUG INFO:
 
