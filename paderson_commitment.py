@@ -37,4 +37,11 @@ def generate_r(q):
 
     return random.randint(0,q-1)
 
+# generating 'commitment' for a given message(m), generator(g), h, r and p
+def commit(m,g,h,r,p):
+
+    t1 = pow(g,m,p)  # g^m mod p
+    t2 = pow(h,r,p)  # h^r mod p
+    return (t1 * t2) % p # (g^m * h^r ) mod p = (g^m mod p * h^r mod p) mod p
+
 
