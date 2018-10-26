@@ -28,7 +28,7 @@ def generate_a():
     return random.randint(constants.RAND_NUMBER_LOWER_BOUND, constants.RAND_NUMBER_UPPER_BOUND)
 
 # generating the public keys 'h'; h = g^a mod p
-def generate_h(g,a,p):
+def generate_h(g,p,a):
 
     return pow(g,a,p)   # g^a mod p
 

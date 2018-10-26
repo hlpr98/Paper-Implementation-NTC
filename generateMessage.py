@@ -2,6 +2,7 @@ import constants
 import generatePrivateSecret as getSecret
 import generateRandomString as getString
 from uuid import getnode as get_mac
+import json
 
 def generateMessage():
 
@@ -19,6 +20,10 @@ def generateMessage():
 
     msg = str(mac_addr) + privateSecret + random_string
 
+    # privateSecret = getSecret.generatePrivateSecret()
+
+    # msg = json.dumps({'mac_addr':str(mac_addr), 'privateSecrete':privateSecret, 'random_string':random_string})
+
     print("DEBUG: MAC Address = {}".format(mac_addr))
     print("DEBUG: Random_String = {}".format(random_string))
     print("DEBUG: Private Secret = {}".format(privateSecret))
@@ -29,4 +34,4 @@ def generateMessage():
 
 
 
-generateMessage()
+# generateMessage()
