@@ -38,25 +38,25 @@ privateMessage = '1' + getMsg.generateMessage()
 
 
 # Step-1: A sends it's commit to node-B
-commit_value_from_A = c.recv(2048)
+commit_value_from_A = int(c.recv(2048).decode())
 
 # Step-2: B sends it's private message to node-A
 c.send(privateMessage.encode())
 
 # Step-3: A sends it's commit-open value to node-B
-open_value_from_A = c.recv(2048)
+open_value_from_A = c.recv(2048).decode()
 
 # Step 3.5: Get the Private Message of node-A using the commit-open values
-private_message_A = f.getPrivateMessageFromNodeA(commit_value_from_A, open_value_from_A)
+private_message_A = f.getPrivateMessageFromNodeA(commit_value_from_A, open_value_from_A) 
 
 # Step-4: Compute the string S (Na xor Nb)
 S = getS.getVerificationString(privateMessage, private_message_A)
 
 
 # Step-5: Exchange string S for verification
-c.send(S.encode(S))
+c.send(S.encode()) 
 
-S_from_A = c.recv(2048)
+S_from_A = c.recv(2048).decode()
 
 if S == S_from_A:
     print("Authenticity of node-B is verified")
