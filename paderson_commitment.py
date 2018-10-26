@@ -45,3 +45,18 @@ def commit(m,g,h,r,p):
     return (t1 * t2) % p # (g^m * h^r ) mod p = (g^m mod p * h^r mod p) mod p
 
 
+# generating 'opened message' for a given in_message(m), generator(g), h, r, commitment(c) and p
+# returns the in_message(m) as the real expected message iff c = g^r * y^m mod p
+def open(m,g,h,r,p,c):
+    
+    t1 = pow(g,m,p)  # g^m mod p
+    t2 = pow(h,r,p)  # h^r mod p
+    c_ = (t1 * t2) % p  # (g^m * h^r ) mod p = (g^m mod p * h^r mod p) mod p
+
+    if c_ == c:
+        return m
+
+    else:
+        return None
+
+
