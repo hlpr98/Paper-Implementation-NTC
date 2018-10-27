@@ -6,7 +6,7 @@ import json
 
 def generateMessage():
 
-    print("\n\n\nGenerating Message\n\n\n")
+    # print("\nGenerating Message")
 
 
     # get the MAC address of the Local Machine, this is a 48-bit integer
@@ -14,23 +14,35 @@ def generateMessage():
 
     # generate a random k bit string
     k = constants.RANDOM_STRING_LENGTH
+    
+    # random string to be appended to Mac address
+    random_string = getString.generateRandomString(constants.RANDOM_STRING_LENGTH)
+    mac_addr = str(mac_addr) + random_string
+
+    # random string Ni, that is used in verification
     random_string = getString.generateRandomString(constants.RANDOM_STRING_LENGTH)
 
-    privateSecret = str(getSecret.generatePrivateSecret())
+    privateSecret, Xi = getSecret.generatePrivateSecret()
 
-    msg = str(mac_addr) + privateSecret + random_string
+    msg = str(mac_addr) + str(privateSecret) + random_string
 
-    # privateSecret = getSecret.generatePrivateSecret()
 
-    # msg = json.dumps({'mac_addr':str(mac_addr), 'privateSecrete':privateSecret, 'random_string':random_string})
+    # print("\n")
+    # print("DEBUG: MAC Address = {}".format(mac_addr))
+    # print("DEBUG: Random_String = {}".format(random_string))
+    # print("DEBUG: Private Secret = {}".format(privateSecret))
 
-    print("DEBUG: MAC Address = {}".format(mac_addr))
-    print("DEBUG: Random_String = {}".format(random_string))
-    print("DEBUG: Private Secret = {}".format(privateSecret))
+    # print("DEBUG: Message: {}".format(msg))
+    # print("\n")
 
-    print("DEBUG: Message: {}".format(msg))
+    print('') 
+    print("MAC Address = {}".format(mac_addr))
+    print("Authentication String = {}".format(random_string))
+    print("Private Secret = {}".format(privateSecret))
 
-    return msg
+    # print("Message: {}".format(msg))
+
+    return msg, privateSecret, Xi
 
 
 
