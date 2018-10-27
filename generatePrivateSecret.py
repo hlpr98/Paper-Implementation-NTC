@@ -5,7 +5,7 @@ import paderson_commitment
 import random
 
 def generatePrivateSecret():
-    print("\n\n\nGenerating Private Secret\n\n\n")
+    # print("\nGenerating Private Secret")
 
     g = constants.SHARED_BASE
     p = constants.SHARED_PRIME
@@ -19,12 +19,20 @@ def generatePrivateSecret():
 
     # DEBUG INFO:
 
-    print("DEBUG: Shared Base: {}".format(g))
-    print("DEBUG: Shared Prime: {}".format(p))
-    print("DEBUG: Exponent: {}".format(Xi))
+    # print("\n")
+    # print("DEBUG: Shared Base: {}".format(g))
+    # print("DEBUG: Shared Prime: {}".format(p))
+    # print("DEBUG: Exponent: {}".format(Xi))
 
-    print("DEBUG: Private Secret: {}".format(privateSecret))
+    # print("DEBUG: Private Secret: {}".format(privateSecret))
+    # print("\n")
+    
+    print('') 
+    print("Shared Base: {}".format(g))
+    print("Shared Prime: {}".format(p))
+    print("Exponent: {}".format(Xi))
 
-    return privateSecret
+    print("Private Secret: {}".format(privateSecret))
 
-# generatePrivateSecret()
+    return privateSecret, Xi
+
