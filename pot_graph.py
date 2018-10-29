@@ -13,29 +13,66 @@ e = []
 f = []
 g = []
 
-with open('funny1.csv') as csv_file:
+
+
+with open('100.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
-        if row[0] == '100':
-            a.append((float(row[2]) - 0.1)/1000000)
-        elif row[0] == '140':
-            b.append((float(row[2]) - 0.1)/1000000)
-        elif row[0] == '160':
-            c.append((float(row[2]) - 0.1)/1000000)
-        elif row[0] == '180':
-            d.append((float(row[2]) - 0.1)/1000000)
-        elif row[0] == '320':
-            e.append((float(row[2]) - 0.1)/1000000)
-        elif row[0] == '384':
-            f.append((float(row[2]) - 0.1)/1000000)
-        else:
-            g.append((float(row[2]) - 0.1)/1000000)
-
-print('completed reading {} {} {}'.format(len(a), len(b), len(c)))
+        a.append((float(row[2]) - 0.1)/1000000)
 
 
+with open('140.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        b.append((float(row[2]) - 0.1)/1000000)
+           
 
-# plt.plot(x_axis, a, 'r--', x_axis, b, 'b--', x_axis, c, 'g--', x_axis, d, 'c--')
-# plt.plot(x_axis, a, x_axis, b, 'b--', x_axis, b, 'g--', x_axis, d, 'r--', x_axis, e, 'k--', x_axis, f, 'y--', x_axis, g, 'c--')
+with open('160.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        c.append((float(row[2]) - 0.1)/1000000)
 
+
+with open('180.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        d.append((float(row[2]) - 0.1)/1000000)
+           
+
+with open('320.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        e.append((float(row[2]) - 0.1)/1000000)
+
+
+with open('384.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        f.append((float(row[2]) - 0.1)/1000000)
+           
+
+with open('512.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        g.append((float(row[2]) - 0.1)/1000000)
+
+
+# print('completed reading {} {} {}'.format(len(a), len(b), len(c)))
+
+
+l1 = plt.plot(x_axis, a, 'r--', label='100')
+l2 = plt.plot(x_axis, b, 'r--', label='140')
+plt.legend(handles=[l1, l2])
 plt.show()
+
+
+# plt.plot(x_axis, a, 'r--', label='100', x_axis, b, 'b--', label='140', x_axis, c, 'g--', label='160', x_axis, d, 'c--',label='180')
+# plt.xlabel('Length of Random String')
+# plt.ylabel('Execution Time (in Microseconds)')
+# plt.show()
+
+
+# plt.plot(x_axis, e, 'r--', x_axis, f, 'b--', x_axis, g, 'g--')
+# plt.xlabel('Length of Random String')
+# plt.ylabel('Execution Time (in Microseconds)')
+# plt.show()
