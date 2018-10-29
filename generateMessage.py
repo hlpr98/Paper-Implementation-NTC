@@ -6,7 +6,7 @@ import json
 
 def generateMessage():
 
-    # print("\nGenerating Message")
+    # # print("\nGenerating Message")
 
 
     # get the MAC address of the Local Machine, this is a 48-bit integer
@@ -27,20 +27,20 @@ def generateMessage():
     msg = str(mac_addr) + str(privateSecret) + random_string
 
 
-    # print("\n")
-    # print("DEBUG: MAC Address = {}".format(mac_addr))
-    # print("DEBUG: Random_String = {}".format(random_string))
-    # print("DEBUG: Private Secret = {}".format(privateSecret))
+    # # print("\n")
+    # # print("DEBUG: MAC Address = {}".format(mac_addr))
+    # # print("DEBUG: Random_String = {}".format(random_string))
+    # # print("DEBUG: Private Secret = {}".format(privateSecret))
 
-    # print("DEBUG: Message: {}".format(msg))
-    # print("\n")
+    # # print("DEBUG: Message: {}".format(msg))
+    # # print("\n")
 
-    print('') 
-    print("MAC Address = {}".format(mac_addr))
-    print("Authentication String = {}".format(random_string))
-    print("Private Secret = {}".format(privateSecret))
+    # print('') 
+    # print("MAC Address = {}".format(mac_addr))
+    # print("Authentication String = {}".format(random_string))
+    # print("Private Secret = {}".format(privateSecret))
 
-    # print("Message: {}".format(msg))
+    # # print("Message: {}".format(msg))
 
     return msg, privateSecret, Xi
 
