@@ -43,10 +43,15 @@ The following two graphs show the plots of length of random strings (k = 10 ,15,
 
 ### Improvements compared to the paper
 
-Our implementation of the algorithm runs faster than the implementation of the paper. Our implementation has an average speedup of <b>17.7 times</b> for lengths of primes = {100, 140, 160, 180 bits}
-and an average speedup of <b>428 times</b> for length of primes = {320, 384, 512 bits}.
+Our implementation tries to elemenate the chances of the <b>Reflection attacks</b> my using "0" at the start of message of Alice and "1" at the start of the message of Bob.
 
-Hence our implementation achieves a total average speedup of <b>194 times</b>. Since we have implemented in Python, we expect our implementation to be atleast <b>5 times</b> more 
-faster when implemented in C (like they have done in the paper), since computations in C are atleast 5 times faster than in Python.
+Our implementation of the algorithm runs at consistent speeds for prime numbers of longer lengths. Our implementation has an average speedup of 0.0177 times for lengths of primes = {100, 140, 160, 180 bits}
+and an average speedup of 0.428 times for length of primes = {320, 384, 512 bits}.
+
+Our implementation does not show such vast variation in the computation speeds as the implementation of the authors' does. Our implementation runs at almost the same speed for the 
+given prime number lengths, which shows the robustness of our implementation.
+
+Since we have implemented in Python, we expect our implementation to be atleast <b>5 times</b> more faster when implemented in C (like they have done in the paper),
+since computations in C are atleast 5 times faster than in Python.
 
 
