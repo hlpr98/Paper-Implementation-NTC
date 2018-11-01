@@ -15,8 +15,8 @@ def getPrivateSecretFromMessage(message):
     h = int(h_[:len(h_)-random_string_len])
     Ni = str(message[(-1)*random_string_len:])
 
-    # print('') 
-    # print("Extracted PRIVATE SECRET(g^Xi) = {}".format(h))
-    # print("Extracted AUTHENTICATION STRING = {}".format(Ni))
+    print('') 
+    print("Extracted PRIVATE SECRET(g^Xi) = {}".format(h))
+    print("Extracted AUTHENTICATION STRING = {}".format(Ni))
     return h, Ni
 

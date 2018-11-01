@@ -27,12 +27,12 @@ def generatePrivateSecret():
     # # print("DEBUG: Private Secret: {}".format(privateSecret))
     # # print("\n")
     
-    # print('') 
-    # print("Shared Base: {}".format(g))
-    # print("Shared Prime: {}".format(p))
-    # print("Exponent: {}".format(Xi))
+    print('') 
+    print("Shared Base: {}".format(g))
+    print("Shared Prime: {}".format(p))
+    print("Exponent: {}".format(Xi))
 
-    # print("Private Secret: {}".format(privateSecret))
+    print("Private Secret: {}".format(privateSecret))
 
     return privateSecret, Xi
 

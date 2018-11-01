@@ -60,10 +60,10 @@ with open('512.csv') as csv_file:
 # print('completed reading {} {} {}'.format(len(a), len(b), len(c)))
 
 
-l1 = plt.plot(x_axis, a, 'r--', label='100')
-l2 = plt.plot(x_axis, b, 'r--', label='140')
-plt.legend(handles=[l1, l2])
-plt.show()
+# l1 = plt.plot(x_axis, a, 'r--', label='100')
+# l2 = plt.plot(x_axis, b, 'r--', label='140')
+# plt.legend(handles=[l1, l2])
+# plt.show()
 
 
 # plt.plot(x_axis, a, 'r--', label='100', x_axis, b, 'b--', label='140', x_axis, c, 'g--', label='160', x_axis, d, 'c--',label='180')
@@ -72,7 +72,7 @@ plt.show()
 # plt.show()
 
 
-# plt.plot(x_axis, e, 'r--', x_axis, f, 'b--', x_axis, g, 'g--')
+plt.plot(x_axis, e, 'r--', x_axis, f, 'b--', x_axis, g, 'g--')
 # plt.xlabel('Length of Random String')
 # plt.ylabel('Execution Time (in Microseconds)')
-# plt.show()
+plt.show()

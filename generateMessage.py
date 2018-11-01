@@ -35,12 +35,12 @@ def generateMessage():
     # # print("DEBUG: Message: {}".format(msg))
     # # print("\n")
 
-    # print('') 
-    # print("MAC Address = {}".format(mac_addr))
-    # print("Authentication String = {}".format(random_string))
-    # print("Private Secret = {}".format(privateSecret))
+    print('') 
+    print("MAC Address = {}".format(mac_addr))
+    print("Authentication String = {}".format(random_string))
+    print("Private Secret = {}".format(privateSecret))
 
-    # # print("Message: {}".format(msg))
+    # print("Message: {}".format(msg))
 
     return msg, privateSecret, Xi
 
